@@ -6,16 +6,17 @@
 	<title>Socket IO Chat with Node!</title>
 	<link rel="stylesheet" href="css/main.css">
 	<script src="https://unpkg.com/vue"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
 </head>
 
 <body>
 	<main id="app">
 		<section class="form-container">
-			<label for="nickname">Your Nickname (optional)</label>
+			<label for="nickname">Nickname</label>
 			<input v-model="nickname" type="text" id="nickname" class="nickname" placeholder="What is your nickname?">
 
 			<form>
-				<label for="message">Something to say?</label>
+				<label for="message">Message</label>
 				<textarea v-model="message" class="message" type="text" autocomplete="off" id="textarea"></textarea>
 				<input @click.prevent="dispatchMessage" type="submit">
 			</form>
