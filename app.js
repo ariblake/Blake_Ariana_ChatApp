@@ -25,6 +25,10 @@ io.on('connection', function(socket) { // soecket is your connection
     console.log('a user has connected');
     socket.emit('connected', {sID: socket.id, message: "new connection"});
 
+    socket.on('user_create', function(name) {
+        io.emit('new_user', { id: socket.id, message: name })
+    })
+
     socket.on("chat_message", function(msg) {
         console.log(msg); //let's see what the payload is from the client side
 
@@ -35,5 +39,6 @@ io.on('connection', function(socket) { // soecket is your connection
 
     socket.on('disconnect', function() {
         console.log('a user has disconnected');
+        //io.emit('new_message', { id: socket.id, message: msg })
     })
 }) 
