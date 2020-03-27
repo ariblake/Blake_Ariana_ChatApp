@@ -5,8 +5,8 @@ export default {
     props: ['msg'],
 
     template: `
-        <p class="new-message" :class="{ 'my-message' : matchedID}">
-            <span>{{ msg.message.name }} says: </span>
+        <p class="new-message pop" :class="{ 'my-message' : matchedID}">
+            <span>{{ msg.message.name }}: </span>
             {{ msg.message.content }}
         </p>
     `,
@@ -16,5 +16,7 @@ export default {
             message: "hello from the template",
             matchedID: this.$parent.socketID == this.msg.id // parent is referring to main_vm.js
         };
+
+        
     }
 }

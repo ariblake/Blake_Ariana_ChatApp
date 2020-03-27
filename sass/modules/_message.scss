@@ -1,14 +1,24 @@
 .new-message { 
     span { font-size: 0.8rem; display: block; margin-bottom: 2px; }
-
     width: 45%;
     padding: 8px 12px;
     background-color: white; 
     border-radius: 8px;
     margin-bottom: 1rem;
-
     float:left;
     clear: both;
+    
+    animation-name: pop;
+    animation-duration: .3s; 
+
+    @keyframes pop {
+        0% {
+          transform: scale(.3);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
 }
 
 .my-message {
@@ -16,3 +26,4 @@
     background-color: #86bf9d;
     color: white;
 }
+
