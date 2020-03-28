@@ -4,10 +4,11 @@
     padding: 8px 12px;
     background-color: white; 
     border-radius: 8px;
+    border: solid 2px #cacaca;
     margin-bottom: 1rem;
     float:left;
     clear: both;
-    
+
     animation-name: pop;
     animation-duration: .3s; 
 
@@ -23,7 +24,7 @@
 
 .my-message {
     float: right !important;
-    background-color: #86bf9d;
-    color: white;
+    background-color: #6aced1;
+    border: solid 2px #57a9ac;
 }
 
