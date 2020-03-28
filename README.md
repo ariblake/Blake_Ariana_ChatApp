@@ -44,4 +44,6 @@ $ npm start
 
 The site should run on localhost:3030
 
+## Acknowledgements
 
+* Fonts are from Google Fonts (https://fonts.google.com)
