@@ -5,6 +5,7 @@
 	<meta charset="UTF-8">
 	<title>Socket IO Chat with Node!</title>
 	<link rel="stylesheet" href="css/main.css">
+	<link href="https://fonts.googleapis.com/css?family=Arvo&display=swap" rel="stylesheet">
 	<script src="https://unpkg.com/vue"></script>
 </head>
 
@@ -14,15 +15,16 @@
 			<form>
 				<label for="message">Message</label>
 				<textarea v-model="message" class="message" type="text" autocomplete="off" id="textarea"></textarea>
-				<input @click.prevent="dispatchMessage" type="submit">
+				<button @click.prevent="dispatchMessage" type="submit">Send</button>
 			</form>
 		</section>
 
 		<div id="nameModal" class="modal">
 			<div class="nickname_form">
 				<h2>Welcome to Chat App!</h2>
-				<label for="nickname">Nickname</label>
-				<input v-model="nickname" type="text" id="nickname" class="nickname" placeholder="Please enter a nickname">
+				<label for="nickname">Please enter a nickname</label>
+				<p>(Leaving it blank will default to anonymous)</p>
+				<input v-model="nickname" type="text" id="nickname" class="nickname" autofocus>
 				<button @click.prevent="setNickname">Let's Chat!</button>
 			</div>
 		</div>

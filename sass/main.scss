@@ -1,66 +1,84 @@
+// imports
+@import 'modules/_message';
+@import 'modules/_modal';
+
 /* reset */
 * {
 	margin: 0; padding: 0; box-sizing: border-box;
 }
 
-html, body { height: 100%; }
+.hidden {
+	display: none;
+}
 
-body { font: 16px Helvetica, Arial; }
+html, body { 
+	height: 100%; 
+	background-color: rgb(68, 68, 68);
+}
+
+body { font-family: 'Arvo', serif;}
 
 main { 
 	display: flex;
 	height: 100%;
 	flex-direction: column-reverse;
 }
-.form-container, .messages { padding: 20px; }
+
+h2 {
+	font-size: 2em;
+}
+
+.form-container, .messages { 
+	padding: 10px 20px; 
+}
+
 .form-container { 
 	flex: 1; 
-	//border: 6px solid red;
-	background-color: #5ec9f3;
-	label { display: block; margin-bottom: 0.3rem; }
+	background-color: #535353;
+	label { 
+		margin-bottom: 5px;
+		font-size: 1.2em;
+		color: white;
+		display: block;
+	}
+	input, textarea { 
+		width: 100%;
+		border: 1px solid #bfcfd6;
+		border-radius: 10px; 
+		font-size: 1.2rem; 
+		padding: 10px; 
+	}
+	button {
+		width: 100%;
+	}
 }
 
 .messages { 
 	flex: 2;
-	background-color: #eee;
-	border: 3px solid #e2e0e0; 
+	background-color: rgb(37, 37, 37);
 }
 
-input, textarea { 
-	display: block; 
-	width: 100%;
+input {
 	border: 1px solid #bfcfd6;
-	//border-color: #bfcfd6; 
 	border-radius: 10px; 
-	font-size: 0.8rem; 
-	padding: 0.4rem; 
-	border-style: solid;
 }
 
-textarea { height: 60px; }
+textarea { height: 80px; }
 
-form {
-	//background: #000;
-	padding: 3px;
-	margin: 12px auto;
-	height: 10%;
+button {
+	background-color: #249da1;
+	padding: 1% 3%;
+	border: none;
+	border-radius: 10px;
+	color: white;
+	font-family: 'Arvo', serif;
+	font-size: 1.2em;
+	cursor: pointer;
+	transition: .5s;
+}
 
-	input[type=submit] { 
-		width: auto; 
-		padding: 10px 20px; 
-		background-color: rgb(36, 94, 141);
-		margin-top: 1rem; 
-		border-radius: 10px;
-		color: white;
-		cursor: pointer;
-		text-transform: uppercase;
-		font-weight: bold;
-		transition: 0.2s;
-	}
-
-	input:hover {
-		background-color: rgb(26, 67, 100);
-	}
+button:hover {
+	background-color: #21898d;
 }
 
 #messages {
@@ -70,31 +88,6 @@ form {
 	li:nth-child(odd) { background: #eee; }
 }
 
-.modal {
-	position: fixed; /* Stay in place */
-	z-index: 1; /* Sit on top */
-	left: 0;
-	top: 0;
-	width: 100%; /* Full width */
-	height: 100%; /* Full height */
-	overflow: auto; /* Enable scroll if needed */
-	background-color: rgb(0,0,0); /* Fallback color */
-	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-	text-align: center;
-  }
-
-  .nickname_form {
-	background-color: #fefefe;
-	margin: 15% auto; /* 15% from the top and centered */
-	padding: 20px;
-	border: 1px solid #888;
-	width: 60%; /* Could be more or less, depending on screen size */
-  }
-
-  .hidden {
-	  display: none;
-  }
-
 @media only screen and (min-width: 992px) {
 	body {
 		width: 70%;
@@ -102,7 +95,3 @@ form {
 		background-color: #fff;
 	}
 }
-
-// imports
-
-@import 'modules/_message';
